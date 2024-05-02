@@ -1,1 +1,12 @@
-<h1>Homepage - Lists</h1>
+<div class="container mt-5">
+  <h1> Lists</h1>
+  <br>
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+      <br>
+    <% end %>
+  </ul>
+
+  <p><%= link_to 'Add new list', new_list_path %></p>
+</div>
